@@ -1,0 +1,23 @@
+doctype html
+html 
+    head 
+        title memo 
+    body 
+        form(method="post" action="/memo")
+            p 
+                label(for='uname') 작성자 : 
+                input(type="text", name="uname")
+            p 
+                //label(for='memo_date') 작성 일시 : 
+                // input(type="text", name="memo_date" value='#{moment(Date.now()).format('MM/DD/YYYY')}')
+                label(for="dateInput") 작성일시
+                input(type="text" name="memo_date" id = "dateInput")
+            P
+                label(for='content') 내용 : 
+                input(type="text", name="content")
+            p
+                input(type="submit" value="Save" class="SaveButton")
+            P
+                form(action="/" method="get")
+                    input(type="submit" value="Cancel" class="CancelButton")
+        
