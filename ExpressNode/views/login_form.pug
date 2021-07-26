@@ -1,0 +1,16 @@
+doctype html
+html
+    head
+        title login
+        link(rel='stylesheet', href='/css/main.css')
+
+    body
+        form(method="post" action="/login")
+            p   
+                label(for='uid') 아이디 : 
+                input(type="text", name="id")
+            p   
+                label(for='upass') 비밀번호 : 
+                input(type="password", name="password")
+            p
+                input(type="submit" value="Login" class="LoginButton")
