@@ -1,0 +1,23 @@
+doctype html 
+html 
+    head 
+        title 개인 메모장
+    body 
+        form(method="post" action="/memo" enctype='multipart/form-data')
+            p 
+                label(for='uname') 작성자 : 
+                input(type="text", name="uname")
+            p 
+                label(for="dateInput") 작성일시
+                input(type="text" name="date")
+            P
+                label(for='content') 내용 : 
+                input(type="text", name="content")
+            p                
+                label(for='file') 파일 : 
+                input(type='file' name='userfile' multiple='multiple')
+            P
+                input(type="submit" value="Save" class="SaveButton")
+            P
+                form(action="/" method="get")
+                    input(type="submit" value="Cancel" class="CancelButton")
