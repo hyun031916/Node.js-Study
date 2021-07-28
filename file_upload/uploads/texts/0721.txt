@@ -1,0 +1,58 @@
+* express: http 웹서버+ 추가기능
+* npm init=> package.json
+* npm i 모듈이름 --save
+
+* 미들웨어:중간에 가로채서 실행되는 프로그램
+  app.use()
+
+* 라우터  : 경로를 지정해주는 미들웨어
+app.get()
+app.post()
+-----------------------
+router.get()
+router.post()
+
+* 템플릿 엔진: view 작성하는 거 pug,ejs
+                    res.render()
+* 정적파일: public   /: app.use(express.static())
+-------------------------------------------------------------------------------------
+<<사용자가 입력한 값을 받기
+1. get: req.query.이름 (header)
+2. post: req.body.이름(body)
+3. http://localhost:3000/jsp  <--req.params.이름
+
+* nodemon (supervisor) : 코드가 변경될때마다 express서버가 자동으로 재시작
+
+readFile()
+writeFile() :   overwrite
+appendFile()
+
+const data={
+_name:req.body.name,
+_password:req.body.password,
+_email: req.body.email
+}
+------------------------------------------------------
+<<파일업로드
+* multer
+
+프로젝트이름: language
+readFile,  readWrite, readdir
+
+입력을 했을 때 : ./data디렉토리밑에 req.body.title로 저장이 되어야 함
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
