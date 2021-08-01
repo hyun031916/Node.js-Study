@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>파일 업로드</title>
+    </head>
+    <body>
+        <form action='/new' method="post" enctype="multipart/form-data">
+            제목 : <input type="text" name="title">
+            작성자 : <input type="text" name="name">
+            내용 : <input type="text" name="content">
+            파일 : <input type="file" name="userfile">
+            비밀번호 : <input type="password" name="password">
+            <input type="submit" value="글 등록">
+        </form>
+    </body>
+</html>

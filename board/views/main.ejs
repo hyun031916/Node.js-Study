@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리스트</title>
+</head>
+<body>
+    <h2>board list</h2>
+    <a href="/new">게시판 작성하기</a>
+    <table border="1">
+        <tr><td>번호</td><td>작성자</td><td>제목</td><td>첨부파일</td><td>조회수</td><td>등록일</td></tr>
+        <% rows.forEach(function(list){ %>
+        <tr>
+            <td><%= list.id %></td>
+            <td><%= list.name %></td>
+            <td><a href="/board/<%=list.id %>"><%= list.title%></a></td>
+            <td><a href="/down/<%=list.file_name %>"><%= list.file_name %></a></td>
+            <td><%= list.hit %></td>
+            <td><%= list.regdate %></td>
+        </tr>
+        <% })%>
+    </table>
+    <form action="/search" method="post" style="text-align: center;">
+        <select name='sel'>
+            <option value='title' selected>title</option>
+            <option value='name'>writer</option>
+            <option value='content'>content1</option>
+        </select>
+        <input type="text" name="txt" />&nbsp;
+        <input type="submit" value="검색" />
+  
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>게시판</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table border="1">
+            <% rowsX.forEach((list)=>{ %>
+                <tr><td>제목</td><td><%= list.title%></td></tr>
+                <tr><td>작성자</td><td><%=list.name%></td></tr>
+                <tr><td>조회수</td><td><%=list.hit%></td></tr>
+                <tr><td>내용</td><td><%=list.content%></td></tr>
+                <tr><td>기타</td><td><a href="/edit/<%=list.id %>">수정</a>&nbsp;<a href="/delete/<%=list.id %>">삭제</a></td></tr>
+            <% })%>
+        </table>
+    </body>
+</html>
