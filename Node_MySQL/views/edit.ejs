@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>읽기</title>
+        <!-- <script type="text/javascript">
+            function message(){
+                var result = prompt('비밀번호');
+            }
+        </script> -->
+    </head>
+    <body>
+        <h1><%=title %></h1>
+        
+        <% rowsX.forEach((item)=>{ %>   
+            <form action="/edit/<%=item.id%>">
+                id : <input type="text" placeholder="<%=item.id%>" name="id" disabled>
+                name : <input type="text" placeholder="<%=item.id%>" name="name">
+                emp_number: <input type="text" placeholder="<%=item.id%>" name="emp_number">           
+                email : <input type="text" placeholder="<%=item.email%>" name="email">
+                <input type="submit" value="edit">
+            </form>
+        <%})%>
+        
+    </body>
+</html>

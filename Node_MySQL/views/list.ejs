@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>list</title>
+    </head>
+    <body>
+        <table>
+            <tr>번호</tr>
+            <tr>이름</tr>
+            <tr>사번</tr>
+            <tr>이메일</tr>
+            <tr>입사일자</tr>
+            <% lists.forEach((val)=>{ %>
+                <td></td>
+            <% }) %>
+        </table>
+        <ul>
+            <% lists.forEach((val)=>{ %>
+                <li> <a href="read/<%= val.id%>"><%= val.id %></a>&nbsp; <%= val.name%>&nbsp; <%= val.emp_number%> &nbsp; <%= val.email%></li>
+            <% }) %>
+        </ul>
+    </body>
+</html>

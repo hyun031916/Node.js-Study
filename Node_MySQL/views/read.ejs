@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>읽기</title>
+    </head>
+    <body>
+        <h1><%=title %></h1>
+
+        <% rowsX.forEach((item)=>{ %>
+            <%=item.id%> <%=item.name%> <%=item.email%> <%=item.join_Date%>
+            <a href="/edit/<%=item.id%>">Edit</a>
+        <%})%>
+        
+        <a href="/edit/<%=rowsX.id%>">Edit</a>
+        <form action="/delete/<%=rowsX.id%>" method="post">
+            <a href="#" onclick="confirm('Do you really want to delete?')? this.parentElement.submit():null;">DELETE</a>
+        </form>
+    </body>
+</html>
