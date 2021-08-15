@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이미지 업로드</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table border="1">
+            <% rows.forEach(function(list){ %>
+                <tr><td>순번</td><td>파일명</td><td>파일명</td><td>실제 파일명</td>
+                <tr><td><%= list.id %></td><td><img src="/uploads/img/<%= list.originalname %>" width="1000" height="500"></td><td><%=list.filename%></td><td><%= list.originalname%></td></tr>
+            <% })%>
+        </table>
+    </body>
+</html>
